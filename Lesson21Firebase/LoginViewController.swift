@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance.signIn(withPresenting: self)
-        
     }
     
     //Не вдалі намагання підключити автентифікацію.
