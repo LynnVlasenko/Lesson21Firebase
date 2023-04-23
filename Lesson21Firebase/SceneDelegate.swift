@@ -53,9 +53,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 //errorMessage = error.localizedDescription //nvf
                 return false
             }
-        //      replace this with the implementation
-        //      return false
+            // replace this with the implementation
+            // return false
         }
+    }
+}
+        //       Намагання підключити GoogleSignIn
+        
         //        guard let _ = (scene as? UIWindowScene) else { return }
         //
         //        guard let clientID = FirebaseApp.app()?.options.clientID else {
@@ -83,5 +87,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //    func sign(_ signin: GibSignin!, didSigninFor user: gIDGoogleUser!, watherror error: Error!) {
         //        print (user.profile.name as Any, user.profile.email as Any, "signed in!!!!!!!!")
         //    }
-    }
-}
