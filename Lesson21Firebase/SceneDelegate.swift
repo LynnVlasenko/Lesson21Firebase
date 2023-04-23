@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, 
                willConnectTo session: UISceneSession, 
                options connectionOptions: UIScene.ConnectionOptions) {
@@ -54,8 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 //errorMessage = error.localizedDescription //nvf
                 return false
             }
-            // replace this with the implementation
-            //return false
+        //      replace this with the implementation
+        //      return false
         }
         //        guard let _ = (scene as? UIWindowScene) else { return }
         //
