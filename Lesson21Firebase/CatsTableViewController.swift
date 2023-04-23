@@ -78,7 +78,6 @@ class CatsTableViewController: UITableViewController {
         }
     }
 
-    
     //Table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cats.count
@@ -126,5 +125,3 @@ class CatsTableViewController: UITableViewController {
             cancelActionHandler: nil)
     }
 }
-
-
