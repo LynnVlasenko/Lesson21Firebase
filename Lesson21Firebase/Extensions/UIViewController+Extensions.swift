@@ -7,7 +7,11 @@
 
 import UIKit
 
-//розширення для алерта з текст філдом //shift+command+k - викликає клавіатуру на екрані(software клавіатура) для введення тексту в текст філд//повторне натискання виключає. Можна ще в Симуляторі в панелі керування обрати I/O -> Keyboard -> Connect Hardware Keyboard - прибирати або ставити галочку.
+//розширення для алерта з текст філдом 
+//shift+command+k - викликає клавіатуру на екрані(software клавіатура) для введення тексту в текст філд
+//повторне натискання виключає. 
+//Можна ще в Симуляторі в панелі керування обрати I/O -> Keyboard -> Connect Hardware Keyboard - прибирати або ставити галочку.
+
 extension UIViewController {
     func presentAlertWithTextField(title: String,
                                    message : String,
@@ -17,7 +21,11 @@ extension UIViewController {
                                    okActionHandler: ((_ text: String?) -> (Void))? = nil,
                                    cancelActionHandler: (() -> ())? = nil) {
 
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)// параметр preferredStyle: .alert - буде показувати повідомлення по середині екрану, а якщо обрати .actionSheet - то виїжджатиме знизу
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // параметр preferredStyle: .alert - буде показувати повідомлення по середині екрану, 
+        //а якщо обрати .actionSheet - то виїжджатиме знизу
+        
         alertController.addTextField { (textField) in //на alertController додаєм текст філду
             textField.placeholder = inputPlaceholder
         }
