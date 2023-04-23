@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, 
+               willConnectTo session: UISceneSession, 
+               options connectionOptions: UIScene.ConnectionOptions) {
         
         func signInWithGoogle() async -> Bool {
             guard let clientID = FirebaseApp.app()?.options.clientID else {
@@ -36,7 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
                 let user = userAuthentication.user
                 guard let idToken = user.idToken else {
-                    fatalError("ID token missing")//AuthenticationError.tokenError(message: "ID token missing") - не працює код, запропонований на Firebase
+                    fatalError("ID token missing")
+                    //AuthenticationError.tokenError(message: "ID token missing") - не працює код, запропонований на Firebase
                 }
                 let accessToken = user.accessToken
                 let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
@@ -66,7 +69,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //
         
         //        налаштування для GoogleSingIn
-        //        задаємо clientID, який беремо з GoogleService-Info.plist. Це можна зробити інакше - зчитуючи інформацію з plist-а по ключу CLIENT_ID. Але команди не працюють і навіть укстеншн не можу зробити, нема просто навіть GIDSignInDelegate
+        //        задаємо clientID, який беремо з GoogleService-Info.plist. 
+        //        Це можна зробити інакше - зчитуючи інформацію з plist-а по ключу CLIENT_ID. 
+        //        Але команди не працюють і навіть укстеншн не можу зробити, нема просто навіть GIDSignInDelegate
+        
         //        GIDSignIn.sharedInstance().clientID = "945713122832-hsa7tv1jgm4qbvra27hb6ad5s7ttlcfq.apps.googleusercontent.com"
         //        GIDSignIn.sharedInstance().delegate = self
         //    }
