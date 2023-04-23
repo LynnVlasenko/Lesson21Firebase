@@ -19,13 +19,16 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance.signIn(withPresenting: self)
         
     }
+    
+    //Не вдалі намагання підключити автентифікацію.
         
 //        let userAuthentication = GIDSignIn.sharedInstance.signIn(withPresenting: self)
 //
 //        let user = userAuthentication.user
 //
 //        guard let idToken = user.idToken else {
-//            print("ID token missing")//AuthenticationError.tokenError(message: "ID token missing") - не працює код, запропонований на Firebase
+//            print("ID token missing")
+              //AuthenticationError.tokenError(message: "ID token missing") - не працює код, запропонований на Firebase
 //        }
 //            let accessToken = user.accessToken
 //            let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
